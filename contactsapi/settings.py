@@ -11,6 +11,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import os
 from pathlib import Path
+import django_heroku
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -139,3 +140,5 @@ STATIC_URL = '/static/'
 # JWT
 # JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
 JWT_SECRET_KEY = 'wqeqwcuajnicjkasbcascuiwoc'
+
+django_heroku.settings(locals())
